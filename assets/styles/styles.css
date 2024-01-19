@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-image: linear-gradient(blue,rgb(0, 0, 66));
+}
+
+#particles-js{
+    background-image: linear-gradient(blue,rgb(0, 0, 66));
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.header .title{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+/* MAIN SECTION */
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.main .container-texto{
+    /* background-color: blue; */
+    padding: 20px;
+}
+
+.main .container-texto .texto textarea{
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 16px 2px #b6ffa9;
+    color: #fff;
+    resize: none;
+}
+
+.main .container-texto .texto textarea::placeholder{
+    color: #f2f2f2;
+}
+
+.container-texto .texto-info{
+    /* background-color: green; */
+    margin-top: 15px;
+    color: #f2f2f2;
+}
+
+.container-texto .texto-info p span{
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #58f3cc;
+}
+
+.botonera{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 150px;
+    height: 40px;
+    font-size: 1.1rem;
+    background-image: linear-gradient(45deg, #58f3cc, #b6ffa9);
+    color: #373737;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid rgb(8, 193, 255);
+    border-radius: 40px;
+    transition: text-shadow 300ms;
+}
+
+.btn:hover{
+    cursor: pointer;
+    text-shadow: 0 0 1px #373737;
+}
+
+.container-encriptador{
+    /* background-color: red; */
+    width: 25%;
+    height: 480px;
+    /* background-color: green; */
+    padding: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 16px 2px #b6ffa9;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.encriptador{
+    /* background-color: blue; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    transition: all 500ms;
+}
+
+.encriptador.desplazar{
+    transform: translate(-150%);
+}
+
+.encriptador-img{
+    /* background-color: red; */
+    margin-top: 5px;
+}
+.encriptador img{
+    width: 65%;
+    min-width: 200px;
+}
+
+.encriptador-info p{
+    margin: 10px 0;
+    color: #f2f2f2;
+    text-shadow: 0 0 6px #fff;
+}
+
+.encriptador-info p:first-child{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #eb3bff;
+    text-shadow: 0 0 6px #ff69eb;
+}
+
+/* RESULTADO DEL ENCRIPTADOR */
+.encriptador-resultado{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(110%);
+    transition: transform 1000ms;
+}
+
+.encriptador-resultado.mostrar{
+    transform: translateY(-90%);
+}
+
+.encriptador-resultado p{
+    box-shadow: 0 0 16px #ff5be9;
+    width: 100%;
+    height: 380px;
+    text-align: left;
+    padding: 15px;
+    color: #f2f2f2;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    font-style: italic;
+}
+
+.footer p{
+    text-align: center;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:980px){
+    .main{
+        flex-wrap: wrap;
+    }
+
+    .main .container-texto{
+        width: 90%;
+    }
+
+    .container-encriptador{
+        width: 80%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:640px){
+    .botonera{
+        flex-direction: column;
+    }
+
+    .container-texto .texto-info p{
+        text-align: center;
+    }
+
+    .encriptador-resultado.mostrar{
+        transform: translateY(-95%);
+    }
+}
+
+

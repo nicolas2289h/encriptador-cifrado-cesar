@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nicolas Huanca">
+    <meta name="description" content="Encriptador de palabras con cifrado Cesar">
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Encriptador (Cifrado César)</h1>
+        </header>
+
+        <section class="main">
+            <div class="container-texto">
+                <div class="texto">
+                    <textarea name="" id="textarea" cols="45" rows="15" placeholder="Ingrese el texto aqui..." required></textarea>
+                </div>
+                <div class="texto-info">
+                    <p>⚠️ Sólo letras <span>minúsculas</span> y <span>sin acentos</span></p>
+                    <div class="botonera">
+                        <button id="btn-encriptar" class="btn">Encriptar</button>
+                        <button id="btn-desencriptar" class="btn">Desencriptar</button>
+                        <button id="btn-adaptar" class="btn">Adaptar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUADRO DE RESULTADO DEL ENCRIPTADOR -->
+            <div class="container-encriptador" id="container-encriptador">
+                <div class="encriptador">
+                    <div class="encriptador-img">
+                        <img src="./assets/imagenes/candado.png" alt="">
+                    </div>
+                    <div class="encriptador-info">
+                        <p>Ningún mensaje fue encontrado</p>
+                        <p>Encriptador basado en el cifrado de César</p>
+                    </div>
+                </div>
+
+                <div class="encriptador-resultado">
+                    <p></p>
+                    <button id="btn-copiar" class="btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p class="footer-texto">&copy Copyright - Nicolás Huanca 2023</p>
+        </footer>
+    </div>
+
+    <!-- fondo con particulas -->
+    <div id="particles-js"></div>
+
+    <!-- particles -->
+    <script src="particles.min.js"></script>
+    <script src="particles.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- main -->
+    <script src="app.js"></script>
+</body>
+</html>
